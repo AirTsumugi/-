@@ -1,0 +1,52 @@
+import  { RouteConfig } from 'vue-router'
+const routes: Array<RouteConfig> = [
+  {
+    path:'/',
+    name:'start',
+    meta:{
+      title:'loading'
+    },
+    component:()=>import('../views/Start.vue')
+  },
+  {
+    path:'/Start',
+    name:'start',
+    meta:{
+      title:'loading'
+    },
+    component:()=>import('../views/Start.vue')
+  },
+  {
+    path:'/Singlist',
+    name:'S inglist',
+    meta:{
+      title:'主页'
+    },
+    component:()=>import('../views/SingList.vue')
+  },
+  {
+    path:'/Sing',
+    name:'sing',
+    meta:{
+      title:'Sing页面'
+    },
+    component:()=>import('../views/Sing.vue')
+  },
+  {
+    path:'/User',
+    name:'user',
+    meta:{
+      title:'用户页面'
+    },
+    component:()=>import('../views/User.vue')
+  },
+  {
+    path:'/Settting',
+    name:'setting',
+    meta:{
+      title:'设置'
+    },
+    component:()=>import('../views/Setting.vue')
+  }
+]
+export default routes
