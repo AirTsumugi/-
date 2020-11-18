@@ -24,12 +24,24 @@
       </el-col>
       <el-col :span="16">歌词</el-col>
     </el-row>
+    <el-row :gutter="20">
+      <el-col :span="8">
+        <h1>{{getUser}}</h1>
+      </el-col>
+      <el-col :span="8">
+        <el-button @click="fs1">点击同步修改</el-button>
+      </el-col>
+      <el-col :span="8">
+        <el-button @click="fs2">点击异步修改</el-button>
+      </el-col>
+    </el-row>
 
   </div>
 
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data(){
     return {
@@ -44,6 +56,17 @@ export default {
           label: '电音'
         }
       ]
+    }
+  },
+  computed:{
+    ...mapGetters(['getUser'])
+  },
+  methods:{
+    fs1(){
+      this.$store.commit('MODIFIY',this.tableData)
+    },
+    fs2(){
+      this.$store.dispatch('MODILIYUSER','田甜')
     }
   }
 }

@@ -1,5 +1,5 @@
 import Axios from 'axios'
-const ut = {
+const api = {
 
 }
-export default ut
+export default api
